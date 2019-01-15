@@ -1,0 +1,41 @@
+{% if paginator.total_pages > 1 %}
+<div class="pagination text-align">
+
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a href="/" >&laquo;</a>
+        {% else %}
+        <a href="/page{{paginator.previous_page}}">&laquo;</a>
+        {% endif %}
+        {% else %}
+        <button disabled="disabled" href="javascript:;">&laquo;</button>
+        {% endif %}
+
+        {% if paginator.page == 1 %}
+        <a href="javascript:;" >1</a>
+        {% else %}
+        <a href="/" >1</a>
+        {% endif %}
+
+        {% for count in (2..paginator.total_pages) %}
+        {% if count == paginator.page %}
+        <a href="javascript:;" >{{count}}</a>
+        {% else %}
+        <a href="/page{{count}}" >{{count}}</a>
+        {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+        <a href="/page{{paginator.next_page}}" >&raquo;</a>
+        {% else %}
+        <button disabled="disabled" href="javascript:;" >&raquo;</button>
+        {% endif %}
+
+
+</div>
+{% endif %}
+
+
+
+
+

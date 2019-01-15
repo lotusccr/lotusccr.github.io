@@ -1,0 +1,43 @@
+
+{% if page.bg %}
+  <aside class="sidebar" role="note" style="background-image: url({{ site.images | relative_url }}/{{ page.bg }})">
+{% else %}
+  <aside class="sidebar" role="note" style="background-image: url({{ site.images | relative_url }}/bg.svg)">
+{% endif %}
+
+  <div class="cover">
+
+    <div class="cover-text">
+
+      <div class="heading">
+	  
+	 
+	   <h1   class="blog-logo" href="{{ site.baseurl }}/">{{ site.title}} </h1>
+ {% if page.tags %}
+          {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/posts/#{{ tag | downcase }}">{{ tag | downcase }}</a>
+          {% endfor %}
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+
+      </div>
+
+      <p>
+        {% if page.summary %}
+          {{ page.summary }}
+        {% endif %}
+      </p>
+	  
+  	 	  <p style="margin:20px 0 10px"> 
+ {% include open-embed.html %}
+    </p>
+    </div>
+    
+  </div>
+
+  <div id="switcher">
+  
+  </div>
+</aside>
+

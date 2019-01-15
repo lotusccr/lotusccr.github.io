@@ -1,0 +1,19 @@
+.about div {
+    margin-left: 30px;
+	text-transform:uppercase;
+	    font-size: 13px;
+}
+
+.about li {
+    text-indent: 30px;
+	display: list-item;
+}
+
+.about a{
+	text-decoration: none;
+}
+a {
+	color: #333;
+	background: transparent;
+}
+

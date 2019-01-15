@@ -1,0 +1,30 @@
+---
+bg: "rails.jpg"
+layout: default
+crawlertitle: "FLYME"
+title: "Voyager"
+summary: "Just do it"
+---
+
+ {% for post in paginator.posts %}
+    <article class="index-page">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {{ post.excerpt }}
+	<p><span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}</p>
+  </article>
+{% endfor %}
+  <!-- Pagination -->
+ <div align="center" style="margin-top:10px"> {% include pagination.html %}</div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+ <script type="text/javascript" src="{{site.baseurl}}/bower_components/jquery/dist/jquery.js"></script>
+<script>
+	 $(function(){
+    arrMusicID = [33469292,32648543,28287132,26511034,435305771,27588029,41462985,28656150,4010799];  
+    musicID = Math.floor(Math.random()*(arrMusicID.length));
+    $('body').css('height',document.documentElement.clientHeight -5);
+
+    if (!Number.isInteger(arrMusicID[musicID])) return; 
+
+    var iframe = document.createElement('iframe');
+    iframe.id="bgm";
+    iframe.style = "position: absolute; bottom: 0; left: 30px; border: 0px;";
+    iframe.src = '//music.163.com/outchain/player?type=2&id=' +arrMusicID[musicID]+ '&auto=1&height=32';
+    console.log(iframe.src);
+    iframe.frameborder="no";
+    iframe.marginwidth="0";
+    iframe.marginheight="0";
+    iframe.width=250;
+    iframe.height=52;
+    document.body.appendChild(iframe);
+});
+</script>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="320" height="150" src="//music.163.com/outchain/player?type=0&id=2617789523&auto=1&height=430"></iframe>
