@@ -44,7 +44,7 @@ sass:
   style: compressed
 
 
-images: '/assets/images'
+images: ['/assets/images','/public/img']
 
 
 ## Gem
